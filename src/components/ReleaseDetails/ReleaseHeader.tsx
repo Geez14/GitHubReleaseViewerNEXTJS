@@ -42,7 +42,7 @@ export const ReleaseHeader: React.FC<ReleaseHeaderProps> = ({ release }) => {
                         <ExternalLink className="w-4 h-4" />
                         View on GitHub
                     </a>
-                    <a
+                    {/* <a
                         href={release.zipball_url}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -50,7 +50,7 @@ export const ReleaseHeader: React.FC<ReleaseHeaderProps> = ({ release }) => {
                     >
                         <Download className="w-4 h-4" />
                         Download ZIP
-                    </a>
+                    </a> */}
                 </div>
             </div>
 

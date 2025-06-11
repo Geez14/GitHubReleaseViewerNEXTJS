@@ -24,7 +24,7 @@ export const PdfPreview: React.FC<PdfPreviewProps> = ({ asset, onClose }) => {
                 setLoading(true);
                 setError(null);
                 console.log("calling server component on: " + `${asset.url}`)
-                const url = await fetchAssetStream(asset.url, asset);
+                const url = await fetchAssetStream(asset.url, asset.content_type);
                 if (isMounted) {
                     setFileUrl(url);
                 }

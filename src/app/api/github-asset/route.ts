@@ -19,6 +19,10 @@ export async function GET(request: NextRequest) {
         });
 
         if (!response.ok) {
+            if (response.status === 404) {
+                // Redirect to error page for 404
+                return NextResponse.redirect(new URL('/404', request.url));
+            }
             throw new Error(`GitHub API error: ${response.status}`);
         }
 
