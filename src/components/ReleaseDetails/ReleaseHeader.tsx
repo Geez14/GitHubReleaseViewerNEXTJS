@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { GitHubRelease } from '@/types/github';
 import { formatDate } from '@/utils/dateUtils';
-import { Tag, Calendar, User, ExternalLink, Download } from 'lucide-react';
+import { Tag, Calendar, User, ExternalLink } from 'lucide-react';
 
 interface ReleaseHeaderProps {
     release: GitHubRelease;
