@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { GitHubAsset } from '@/types/github';
-import { X, Download } from 'lucide-react';
+import { X, Download} from 'lucide-react';
 import fetchAssetStream from '@/lib/streamFetchApi';
 
 interface PdfPreviewProps {
@@ -17,10 +17,8 @@ export const PdfPreview: React.FC<PdfPreviewProps> = ({ asset, onClose }) => {
 
     useEffect(() => {
         let isMounted = true;
-
         const loadFile = async () => {
             try {
-
                 setLoading(true);
                 setError(null);
                 console.log("calling server component on: " + `${asset.url}`)
@@ -41,7 +39,6 @@ export const PdfPreview: React.FC<PdfPreviewProps> = ({ asset, onClose }) => {
         };
 
         loadFile();
-
         return () => {
             isMounted = false;
         };
@@ -63,7 +60,7 @@ export const PdfPreview: React.FC<PdfPreviewProps> = ({ asset, onClose }) => {
             link.click();
             document.body.removeChild(link);
         }
-    };    return (
+    }; return (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-2 sm:p-4">
             <div className="bg-white rounded-lg shadow-2xl w-full max-w-4xl h-full max-h-[95vh] sm:max-h-[90vh] flex flex-col">
                 <div className="flex items-center justify-between p-3 sm:p-4 border-b border-gray-200">
