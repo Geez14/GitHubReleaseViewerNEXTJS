@@ -53,8 +53,8 @@ export const AssetItem: React.FC<AssetItemProps> = ({ asset, onPreview }) => {
     return (
         <div className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
             <div className="flex items-start justify-between mb-3">
-                <div className="ilex items-center gap-2">
-                    <span className="text-2xl">{getFileIcon(asset.name, asset.content_type)}</span>
+                <div className="flex items-center gap-2 min-w-0 flex-1">
+                    <span className="text-2xl flex-shrink-0">{getFileIcon(asset.name, asset.content_type)}</span>
                     <div className="min-w-0 flex-1">
                         <h3 className="font-medium text-gray-900 truncate" title={asset.name}>
                             {asset.name}
